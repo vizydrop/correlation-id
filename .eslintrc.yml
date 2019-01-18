@@ -1,0 +1,1 @@
+extends: "@vizydrop/eslint-config-vizydrop/server"
