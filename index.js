@@ -24,11 +24,13 @@ module.exports = (opts = {}) => {
     });
 
     const getId = () => store.get(CORRELATION_ID_KEY);
-
     const bindEmitter = (emitter) => store.bindEmitter(emitter);
+    const bind = (fn) => store.bind(fn);
+
     return {
         withId,
         getId,
         bindEmitter,
+        bind
     }
 };

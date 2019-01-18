@@ -1,6 +1,6 @@
 {
   "name": "@vizydrop/correlator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "description": "Vizydrop correlator based on async hooks",
   "repository": "git@github.com:vizydrop/correlator.git",
