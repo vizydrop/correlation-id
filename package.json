@@ -1,0 +1,20 @@
+{
+  "name": "@vizydrop/correlator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Vizydrop correlator based on async hooks",
+  "repository": "git@github.com:vizydrop/correlator.git",
+  "author": "Vizydrop Team",
+  "license": "MIT",
+  "keywords": [
+    "vizydrop",
+    "correlation-id",
+    "async-hooks"
+  ],
+  "dependencies": {
+    "cls-hooked": "4.2.2"
+  },
+  "peerDependencies": {
+    "uuid": "^3.3.2"
+  }
+}
