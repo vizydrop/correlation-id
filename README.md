@@ -60,7 +60,7 @@ Custom settings can be passed as an object to `createCorrelationId` function.
 - `namespaceName` - namespace for cls hook. Default value is `correlation-id-namespace`
 - `httpHeaderParamName` - name of http header that contains correlation id value. Default value is `x-correlation-id`
 
-## Correlation ID Api
+## Correlation ID API
 - `expressMiddleware` - express middleware that runs next middlewares in scope of correlation id async hook
 - `koaMiddleware` - koa middleware that runs next middlewares in scope of correlation id async hook
 - `enhanceHttpRequest` - takes request and return new request instance that adds correlation id header by default
@@ -70,3 +70,25 @@ Custom settings can be passed as an object to `createCorrelationId` function.
 - `correlator.bindEmitter()` - see https://github.com/jeff-lewis/cls-hooked#namespacebindemitteremitter
 - `correlator.bind()` - see https://github.com/jeff-lewis/cls-hooked#namespacebindemitteremitter
 - `correlator.generateId()` - generates new correlation id
+
+## Known issues
+- does not work well with `bluebird.promisifyAll`. Alternative solution is to explicitly promisify using native promise
+```javascript
+const redis = require(`redis`);
+const util = require(`util`);
+
+const client = redis.createClient();
+
+client.setAsync = util.promisify(client.set).bind(client);
+client.getAsync = util.promisify(client.get).bind(client);
+```
+
+- does not work well with `mongoose` callbacks. Alternative solution is to use promisified functions.
+```javascript
+const mongoose = require(`mongooose`);
+mongoose.Promise = global.Promise;
+
+EntityModel.find({name: `name`}).then((value) => {
+    // do something
+});
+```
