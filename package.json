@@ -1,6 +1,6 @@
 {
   "name": "@vizydrop/correlation-id",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "index.js",
   "description": "Vizydrop correlation id helper based on async hooks",
   "repository": "git@github.com:vizydrop/correlator.git",
@@ -19,7 +19,7 @@
     "cls-hooked": "4.2.2"
   },
   "peerDependencies": {
-    "uuid": "^3.3.2"
+    "uuid": "^3.0.0"
   },
   "scripts": {
     "lint": "eslint --quiet ."
