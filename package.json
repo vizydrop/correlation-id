@@ -1,6 +1,6 @@
 {
   "name": "@vizydrop/correlation-id",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "main": "index.js",
   "description": "Vizydrop correlation id helper based on async hooks",
   "repository": "git@github.com:vizydrop/correlator.git",
@@ -19,7 +19,7 @@
     "cls-hooked": "4.2.2"
   },
   "peerDependencies": {
-    "uuid": "^3.0.0"
+    "uuid": "^7.0.0"
   },
   "scripts": {
     "lint": "eslint --quiet ."
@@ -36,6 +36,7 @@
     "eslint-plugin-lodash-fp": "2.2.0-a1",
     "eslint-plugin-mocha": "6.3.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "4.2.1"
+    "eslint-plugin-promise": "4.2.1",
+    "uuid": "^7.0.3"
   }
 }
