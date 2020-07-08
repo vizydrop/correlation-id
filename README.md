@@ -58,7 +58,7 @@ function runJob() {
 Custom settings can be passed as an object to `createCorrelationId` function.
 - `generateDefaultId` - function that should return new correlation id. By default `uuid` is used.
 - `namespaceName` - namespace for cls hook. Default value is `correlation-id-namespace`
-- `httpHeaderParamName` - name of http header that contains correlation id value. Default value is `x-correlation-id`
+- `httpHeaderParamName` - name of http header that contains correlation id value. Default value is `x-correlationid`
 
 ## Correlation ID API
 - `expressMiddleware` - express middleware that runs next middlewares in scope of correlation id async hook
